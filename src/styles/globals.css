@@ -31,3 +31,75 @@ body {
     text-wrap: balance;
   }
 }
+
+
+/* Floating label styles */
+.floating-label {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.floating-label input {
+  width: 100%;
+  padding: 1rem 0.75rem 0.25rem 0.75rem;
+  border-radius: 0.375rem; /* rounded */
+  transition: border-color 0.2s;
+  @apply border-gray-300 text-gray-500
+}
+
+.floating-label input:focus {
+  outline: none;
+  @apply border-blue-500
+}
+
+.floating-label label {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background: white;
+  padding: 0 0.45rem;
+  transition: all 0.2s;
+  pointer-events: none;
+  @apply text-gray-500
+}
+
+.floating-label input:focus + label{
+  top: -0.5rem;
+  left: 0.75rem;
+  @apply text-[0.75rem] !text-blue-500;
+
+}
+
+
+.floating-label input:not(:placeholder-shown) + label {
+  top: -0.5rem;
+  left: 0.75rem;
+  @apply text-[0.75rem] text-gray-800;
+}
+
+.floating-label-Select{
+  position: relative;
+
+}
+
+.floating-label-Select input,
+.floating-label-Select button{
+  @apply min-h-[45px]
+}
+.floating-label-Select label{
+  position: absolute;
+  top: 0.70rem;
+  left: 0.75rem;
+  background: white;
+  padding: 0 0.45rem;
+  transition: all 0.2s;
+  pointer-events: none;
+  @apply text-gray-500 z-50;
+}
+.selectLabel label{
+  top: -0.5rem;
+  left: 0.75rem;
+  @apply text-[0.75rem] text-blue-500 z-50;
+
+}
+
